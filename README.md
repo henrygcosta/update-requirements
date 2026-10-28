@@ -47,7 +47,7 @@ Ao final, imprime um relatório consolidado no console e grava uma cópia em
 
 ```bash
 git clone <url-deste-repositorio>
-cd autoupdate-libs
+cd update-requirements
 python -m venv .venv
 # Windows:
 .venv\Scriptsctivate
