@@ -49,8 +49,8 @@ Ao final, imprime um relatório consolidado no console e grava uma cópia em
 git clone <url-deste-repositorio>
 cd update-requirements
 python -m venv .venv
-# Windows:
-.venv\Scriptsctivate
+# Windows (PowerShell):
+.\venv\Scripts\Activate.ps1
 # Linux/macOS:
 # source .venv/bin/activate
 pip install -r requirements.txt
