@@ -25,15 +25,7 @@ log_dir: logs
 # "nome==versao". Se uma dependência não existir no requirements.txt de um
 # repositório, ela é adicionada ao final do arquivo.
 target_dependencies:
-  - google-api-core==2.33.0
-  - googleapis-common-protos==1.75.0
-  - proto-plus==1.28.2
-  - google-cloud-bigquery-storage==2.39.0
-  - google-cloud-secret-manager==2.30.0
   - requests==2.34.2
-  - grpcio==1.83.0
-  - protobuf==7.36.0rc1
-  - pyasn1==0.6.4
 
 # Lista de repositórios já clonados localmente.
 repositories:
