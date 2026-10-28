@@ -1,0 +1,46 @@
+# Copie este arquivo para config.yaml e ajuste os caminhos dos repositórios.
+
+# Branch em que a atualização deve ser feita em cada repositório.
+branch: dev
+
+# Mensagem usada no commit quando o requirements.txt é alterado.
+commit_message: "update libs"
+
+# Se true, faz "git push origin <branch>" após cada commit bem-sucedido.
+# Pode ser sobrescrito na linha de comando com --push / --no-push.
+push: false
+
+# Caminho padrão do requirements.txt dentro de cada repositório (relativo à raiz
+# do repo). Pode ser sobrescrito por repositório individualmente (veja abaixo).
+requirements_path: requirements.txt
+
+# Nível de verbosidade dos logs: DEBUG, INFO, WARNING ou ERROR.
+log_level: INFO
+
+# Diretórios (relativos ao diretório de execução) onde relatórios e logs são salvos.
+report_dir: reports
+log_dir: logs
+
+# Dependências que devem ser atualizadas em TODOS os repositórios, no formato
+# "nome==versao". Se uma dependência não existir no requirements.txt de um
+# repositório, ela é adicionada ao final do arquivo.
+target_dependencies:
+  - google-api-core==2.33.0
+  - googleapis-common-protos==1.75.0
+  - proto-plus==1.28.2
+  - google-cloud-bigquery-storage==2.39.0
+  - google-cloud-secret-manager==2.30.0
+  - requests==2.34.2
+  - grpcio==1.83.0
+  - protobuf==7.36.0rc1
+  - pyasn1==0.6.4
+
+# Lista de repositórios já clonados localmente.
+repositories:
+  - path: C:/repos/service-a
+  - path: C:/repos/service-b
+    # Sobrescreve requirements_path apenas para este repositório:
+    requirements_path: app/requirements.txt
+  - path: C:/repos/service-c
+    # Nome amigável usado nos logs/relatórios (default: nome da pasta):
+    name: service-c-billing
